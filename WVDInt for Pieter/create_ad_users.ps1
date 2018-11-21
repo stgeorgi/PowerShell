@@ -34,6 +34,11 @@ foreach ($user in $Users)
        {
                #If user does exist, output a warning message
                Write-Warning "[Warning]'t A user account $Username has already exist in Active Directory."
+               
+               
+               # add this so I can reuse the same script to update the password
+               # Set-ADAccountPassword -Identity $Username -PassThru -NewPassword (ConvertTo-SecureString -AsPlainText $Password -Force)
+               # Set-ADUser -Identity $Username -ChangePasswordAtLogon $False       
        }
        else
        {
