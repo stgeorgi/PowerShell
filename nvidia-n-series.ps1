@@ -140,6 +140,16 @@ Remove-RdsRemoteApp $tenant1 $pool1 $appgroup3 -Name VLC_appattach
 Remove-RdsRemoteApp $tenant1 $pool1 $appgroup3 -Name visualstudiocode
 
 # Sotuhworks UI
+while($true)
+{
+    Read-Host -Prompt "Press Enter to generate a token"
+ 
+    (Get-Variable "AdalContext").Value.GetAcquireTokenAsync().Wait()
+ 
+    (Get-Variable "AdalContext").Value.authResult.AccessToken
+ 
+    Write-Host "";
+}
 
 ### OLD below 
 $pool1 = "fslogix10"
