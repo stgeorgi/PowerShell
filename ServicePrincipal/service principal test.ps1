@@ -1,6 +1,6 @@
 $myTenantGroupName = "WVDValidation"
 $myTenantName = "SelfhostTest"
-$wvdPowerShellLocation = "C:\temp\20181105.1-1.0.0.1125\PowershellModules"
+$wvdPowerShellLocation = "C:\temp\PowershellModules"
 
 # Create service principal in Azure AD
 Import-Module AzureAD
